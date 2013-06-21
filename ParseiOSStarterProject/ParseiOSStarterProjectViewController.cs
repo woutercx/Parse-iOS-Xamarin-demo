@@ -40,12 +40,16 @@ namespace ParseiOSStarterProject
 
 		public async void CallParse()
 		{
+			//Store a simple object at Parse
 			var testObject = new ParseObject ("TestObject");
 			testObject ["foo"] = "bar";
 			await testObject.SaveAsync();
 
+			//Call a cloud function that is created in the Cloud Code section in your Parse app
+			//in the dashboard of your Parse app on the Parse site.
 			var result = await ParseCloud.CallFunctionAsync<string>("hello", new Dictionary<string, object>());
 
+			//Show the result f
 			var x = new UIAlertView ("Title", result,  null, "Cancel", "OK");
 			x.Show ();
 
