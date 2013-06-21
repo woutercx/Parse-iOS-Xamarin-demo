@@ -12,3 +12,7 @@ Parse.Cloud.define("hello", function(request, response) {
 });
 
 ```
+
+In AppDelegate.cs, change the Parse Application ID and Windows key
+(where it says "YOUR PARSE APPLICATION ID HERE" and "YOUR PARSE WINDOWS KEY HERE".
+
